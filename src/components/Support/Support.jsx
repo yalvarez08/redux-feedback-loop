@@ -25,7 +25,7 @@ function Support () {
         <div>
             <h2>How well are you being supported?</h2>
             <label>Support</label>
-            <input data-testid="input" type="number" value={supportInput} onChange={evt => setSupportInput(evt.target.value)}/>
+            <input data-testid="input" type="number" max='5' value={supportInput} onChange={evt => setSupportInput(evt.target.value)}/>
             <button data-testid="next" onClick={addSupport}>NEXT</button>
 
         </div>

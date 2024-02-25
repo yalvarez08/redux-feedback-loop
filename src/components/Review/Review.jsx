@@ -11,8 +11,8 @@ function Review ({fetchAllFeedback}) {
     const support = useSelector(store => store.support);
     const comments = useSelector(store => store.comments);
 
-    const handleSubmitReview = (event) => {
-        event.preventDefault();
+    const handleSubmitReview = (evt) => {
+        evt.preventDefault();
         console.log('Adding feedback responses to database:', {feeling, understanding, support, comments})
         axios.post('/api/feedback', {
         feeling, understanding, support, comments

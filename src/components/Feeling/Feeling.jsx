@@ -25,7 +25,7 @@ function Feeling () {
         <div>
             <h2>How are you feeling today?</h2>
             <label>Feeling</label>
-            <input data-testid="input" type="number" value={feelingInput} onChange={evt => setFeelingInput(evt.target.value)}/>
+            <input data-testid="input" type="number" max='5' value={feelingInput} onChange={evt => setFeelingInput(evt.target.value)}/>
             <button data-testid="next" onClick={addFeeling}>NEXT</button>
 
         </div>

@@ -25,7 +25,7 @@ function Understanding () {
         <div>
             <h2>How well are you understanding the content?</h2>
             <label>Understanding</label>
-            <input data-testid="input" type="number" value={understandingInput} onChange={evt => setUnderstandingInput(evt.target.value)}/>
+            <input data-testid="input" type="number" max='5' value={understandingInput} onChange={evt => setUnderstandingInput(evt.target.value)}/>
             <button data-testid="next" onClick={addUnderstanding}>NEXT</button>
 
         </div>

@@ -17,12 +17,20 @@ import logger from "redux-logger";
     if (action.type === "SET_FEELING") {
       return action.payload;
     }
+    if (action.type === "RESET_FEELING") {
+        console.log(`resetting feeling: ${action.payload}`);
+        return 0;
+    }
     return state;
   };
 
   const understanding = (state = 0, action) => {
     if (action.type === "SET_UNDERSTANDING") {
       return action.payload;
+    }
+    if (action.type === "RESET_UNDERSTANDING") {
+        console.log(`resetting understanding: ${action.payload}`);
+        return 0;
     }
     return state;
   };
@@ -31,12 +39,20 @@ import logger from "redux-logger";
     if (action.type === "SET_SUPPORT") {
       return action.payload;
     }
+    if (action.type === "RESET_SUPPORT") {
+        console.log(`resetting support: ${action.payload}`);
+        return 0;
+    }
     return state;
   };
 
   const comments = (state = '', action) => {
     if (action.type === "SET_COMMENTS") {
       return action.payload;
+    }
+    if (action.type === "RESET_COMMENTS") {
+        console.log(`resetting comments: ${action.payload}`);
+        return '';
     }
     return state;
   };    
