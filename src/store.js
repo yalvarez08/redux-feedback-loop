@@ -13,35 +13,35 @@ import logger from "redux-logger";
     return state;  
     };
 
-    const feeling = (state = 0, action) => {
+    const feeling = (state = '', action) => {
     if (action.type === "SET_FEELING") {
       return action.payload;
     }
     if (action.type === "RESET_FEELING") {
         console.log(`resetting feeling: ${action.payload}`);
-        return 0;
+        return '';
     }
     return state;
   };
 
-  const understanding = (state = 0, action) => {
+  const understanding = (state = '', action) => {
     if (action.type === "SET_UNDERSTANDING") {
       return action.payload;
     }
     if (action.type === "RESET_UNDERSTANDING") {
         console.log(`resetting understanding: ${action.payload}`);
-        return 0;
+        return '';
     }
     return state;
   };
 
-  const support = (state = 0, action) => {
+  const support = (state = '', action) => {
     if (action.type === "SET_SUPPORT") {
       return action.payload;
     }
     if (action.type === "RESET_SUPPORT") {
         console.log(`resetting support: ${action.payload}`);
-        return 0;
+        return '';
     }
     return state;
   };

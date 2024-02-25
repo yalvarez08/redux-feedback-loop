@@ -8,7 +8,7 @@ function Support () {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [supportInput, setSupportInput] = useState(0)
+    const [supportInput, setSupportInput] = useState('')
 
     const addSupport = (evt) => {
         evt.preventDefault();
@@ -16,7 +16,7 @@ function Support () {
             type: "SET_SUPPORT",
             payload: supportInput
         });
-        setSupportInput(0)
+        setSupportInput('')
         history.push('/comments')
     }
 

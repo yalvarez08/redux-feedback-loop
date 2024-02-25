@@ -8,7 +8,7 @@ function Feeling () {
     const dispatch = useDispatch();
     const history = useHistory();
     
-    const [feelingInput, setFeelingInput] = useState(0)
+    const [feelingInput, setFeelingInput] = useState('')
 
     const addFeeling = (evt) => {
         evt.preventDefault();
@@ -16,7 +16,7 @@ function Feeling () {
             type: "SET_FEELING",
             payload: feelingInput
         });
-        setFeelingInput(0);
+        setFeelingInput('');
         history.push('/understanding')
     }
 
@@ -25,7 +25,7 @@ function Feeling () {
         <div>
             <h2>How are you feeling today?</h2>
             <label>Feeling</label>
-            <input data-testid="input" type="number" max='5' value={feelingInput} onChange={evt => setFeelingInput(evt.target.value)}/>
+            <input data-testid="input" required type="number" max='5' value={feelingInput} onChange={evt => setFeelingInput(evt.target.value)}/>
             <button data-testid="next" onClick={addFeeling}>NEXT</button>
 
         </div>

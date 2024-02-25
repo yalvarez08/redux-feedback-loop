@@ -8,7 +8,7 @@ function Understanding () {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [understandingInput, setUnderstandingInput] = useState(0)
+    const [understandingInput, setUnderstandingInput] = useState('')
 
     const addUnderstanding = (evt) => {
         evt.preventDefault();
@@ -16,7 +16,7 @@ function Understanding () {
             type: "SET_UNDERSTANDING",
             payload: understandingInput
         });
-        setUnderstandingInput(0);
+        setUnderstandingInput('');
         history.push('/support')
     }
 
