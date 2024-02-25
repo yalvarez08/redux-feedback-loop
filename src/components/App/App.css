@@ -1,23 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #ceb1ef;
   min-height: 70px;
-  padding: 20px;
-  color: white;
+  padding: 10px;
+  color: rgb(17, 17, 17);
   margin-bottom: 20px;
 }
 
 .App-title {
-  font-size: 2em;
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: 4px;
 }
 
 .App-intro {
   font-size: large;
 }
 
-h4 {
-  font-style: italic;
+h2 {
+  margin-top: 2em;
+}
+
+#input_div {
+  margin-top: 4em;
+}
+
+label {
+  margin-right: 2em;
+}
+
+.next {
+    align-items: center;
+    background-color: #c931d7;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #f6f3f3;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 1em;
+    height: 32px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.next:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 32px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+  
+.next:hover:after {
+    transform: translate(0, 0);
+}
+  
+.next:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+  
+.next:hover {
+    outline: 0;
+}
+  
+@media (min-width: 768px) {
+  .next {
+    padding: 0 40px;
+  }
+}
+
+.blink-subtitle {
+  font-family: "Patrick Hand", cursive;
+  font-size: 24px;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+  25%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0.5;
+  }
 }

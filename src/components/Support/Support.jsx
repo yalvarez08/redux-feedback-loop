@@ -12,6 +12,11 @@ function Support () {
 
     const addSupport = (evt) => {
         evt.preventDefault();
+        if (!supportInput) {
+            alert('Please enter a number between 1 and 5.');
+            return;
+        }
+
         dispatch({
             type: "SET_SUPPORT",
             payload: supportInput
@@ -20,15 +25,17 @@ function Support () {
         history.push('/comments')
     }
 
-
     return (
+        <>
         <div>
             <h2>How well are you being supported?</h2>
-            <label>Support</label>
-            <input data-testid="input" type="number" max='5' value={supportInput} onChange={evt => setSupportInput(evt.target.value)}/>
-            <button data-testid="next" onClick={addSupport}>NEXT</button>
-
         </div>
+        <div id="input_div">
+            <label>Support:</label>
+            <input data-testid="input" type="number" required max='5' value={supportInput} onChange={evt => setSupportInput(evt.target.value)}/>
+            <button data-testid="next" className="next" onClick={addSupport}>NEXT</button>
+        </div>
+        </>
     )
 }
 

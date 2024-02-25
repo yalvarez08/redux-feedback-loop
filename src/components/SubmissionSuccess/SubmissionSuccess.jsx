@@ -22,7 +22,7 @@ function SubmissionSuccess () {
         </div>
         <div>
             <h3>Thank you for your feedback!</h3>
-            <button data-testid="next" onClick={handleNewActionBtn}>Leave New Feedback</button>
+            <button data-testid="next" className="next" onClick={handleNewActionBtn}>Leave New Feedback</button>
 
         </div>
         </>

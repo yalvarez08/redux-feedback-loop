@@ -37,7 +37,7 @@ function Review ({fetchAllFeedback}) {
             <p>Comments: {comments}</p>
         </div>
 
-        <button data-testid="next" onClick={handleSubmitReview}>Submit</button>
+        <button data-testid="next" className="next" onClick={handleSubmitReview}>Submit</button>
         </>
     )
 }

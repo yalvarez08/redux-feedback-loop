@@ -20,15 +20,17 @@ function Comments () {
         history.push('/review')
     }
 
-
     return (
+        <>
         <div>
             <h2>Any comments you want to leave?</h2>
-            <label>Comments</label>
-            <input data-testid="input" type="text" value={commentsInput} onChange={evt => setCommentsInput(evt.target.value)}/>
-            <button data-testid="next" onClick={addComments}>NEXT</button>
-
         </div>
+        <div id="input_div">
+            <label>Comments:</label>
+            <input data-testid="input" type="text" value={commentsInput} onChange={evt => setCommentsInput(evt.target.value)}/>
+            <button data-testid="next" className="next" onClick={addComments}>NEXT</button>
+        </div>
+        </>
     )
 }
 

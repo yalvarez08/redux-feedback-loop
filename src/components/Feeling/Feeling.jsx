@@ -12,6 +12,11 @@ function Feeling () {
 
     const addFeeling = (evt) => {
         evt.preventDefault();
+        if (!feelingInput) {
+            alert('Please enter a number between 1 and 5.');
+            return;
+        }
+
         dispatch({
             type: "SET_FEELING",
             payload: feelingInput
@@ -20,15 +25,17 @@ function Feeling () {
         history.push('/understanding')
     }
 
-
     return (
+        <>
         <div>
             <h2>How are you feeling today?</h2>
-            <label>Feeling</label>
-            <input data-testid="input" required type="number" max='5' value={feelingInput} onChange={evt => setFeelingInput(evt.target.value)}/>
-            <button data-testid="next" onClick={addFeeling}>NEXT</button>
-
         </div>
+        <div id="input_div">
+            <label>Feeling:</label>
+            <input data-testid="input" type="number" required max='5' value={feelingInput} onChange={evt => setFeelingInput(evt.target.value)}/>
+            <button data-testid="next" className="next" onClick={addFeeling}>NEXT</button>
+        </div>
+        </>
     )
 }
 
