@@ -6,7 +6,12 @@ This feedback form (modeled after Prime's feedback system) is an application tha
 
 ## Screenshot
 
+First page of feedback form.
 
+<img width="1338" alt="Screenshot 2024-02-25 at 3 44 01 PM" src="https://github.com/yalvarez08/redux-feedback-loop/assets/145588787/4c9ce399-7d1d-449d-9470-d685665a19d4">
+
+
+  
 ## Installation
 To get this application up and functionally working, follow these steps:
 
